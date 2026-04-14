@@ -60,9 +60,17 @@ Todos outros formatos passam normalmente pelo `Read` nativo.
 
 ## Compatibilidade
 
-- macOS ✅
-- Linux ✅
-- Windows ✅ (hook em Node.js puro, sem dependência de bash/jq)
+| Plataforma | Status | Observação |
+|---|---|---|
+| macOS | ✅ | Nativo |
+| Linux | ✅ | Nativo |
+| Windows | ✅ | Requer Git Bash (já vem com Claude Code) ou WSL |
+
+**Por que funciona no Windows sem adaptação:**
+- Hook escrito em **Node.js puro** (sem bash, jq, ou shell-ismos)
+- `pathToFileURL()` do Node é platform-aware — converte `C:\Users\...` pra `file:///C:/Users/...` automaticamente
+- Path do script com aspas no `hooks.json` — suporta pastas com espaço (ex: `C:\Users\João Silva\...`)
+- Line endings forçados pra LF via `.gitattributes` (evita quebra em scripts checkout no Windows)
 
 ## Como desativar temporariamente
 

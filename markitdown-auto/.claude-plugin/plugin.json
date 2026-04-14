@@ -1,7 +1,7 @@
 {
   "name": "markitdown-auto",
   "description": "Economia automática de tokens: intercepta Read em PDF/DOCX/PPTX/XLSX/EPUB e redireciona pro MarkItDown MCP (converte localmente pra Markdown).",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Daniel Oliveira",
     "url": "https://github.com/gestordeaudiencia"
