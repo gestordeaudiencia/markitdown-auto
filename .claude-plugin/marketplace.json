@@ -1,0 +1,15 @@
+{
+  "name": "markitdown-auto",
+  "owner": {
+    "name": "Daniel Oliveira",
+    "url": "https://github.com/gestordeaudiencia"
+  },
+  "plugins": [
+    {
+      "name": "markitdown-auto",
+      "source": "./markitdown-auto",
+      "description": "Intercepta Read em arquivos binários/estruturados (PDF, DOCX, PPTX, XLSX, XLS, DOC, EPUB) e redireciona pro MarkItDown MCP — conversão local pra Markdown, economizando 5-10x tokens.",
+      "version": "1.0.0"
+    }
+  ]
+}
