@@ -8,8 +8,8 @@
     {
       "name": "markitdown-auto",
       "source": "./markitdown-auto",
-      "description": "Intercepta Read em arquivos binários/estruturados (PDF, DOCX, PPTX, XLSX, XLS, DOC, EPUB) e redireciona pro MarkItDown MCP — conversão local pra Markdown, economizando 5-10x tokens.",
-      "version": "1.0.1"
+      "description": "Intercepta Read em arquivos binários/estruturados (PDF, DOCX, DOC, PPTX, XLSX, XLS, EPUB, CSV, HTML/HTM, RTF, ODT, ODS, ODP, EML, MSG, ZIP) e redireciona pro MarkItDown MCP — conversão local pra Markdown, economizando 5-10x tokens. Suporta MARKITDOWN_AUTO_DEBUG=1 e MARKITDOWN_AUTO_DISABLE=1.",
+      "version": "1.1.0"
     }
   ]
 }
