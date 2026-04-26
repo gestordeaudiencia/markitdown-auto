@@ -3,7 +3,13 @@
 const { pathToFileURL } = require("url");
 
 const SUPPORTED = /\.(pdf|docx|doc|pptx|xlsx|xls|epub|csv|html|htm|rtf|odt|ods|odp|eml|msg|zip)$/i;
-const SAFE_URI = /^file:\/\/\/[A-Za-z0-9._\-/%+:()\s]+$/;
+// Allow any file:/// path that contains no shell-meaningful or control chars.
+// Was previously a strict allowlist that rejected PT-BR filenames with [ ] & ' = ! @ # ~
+// (very common in this user's repos, e.g. Notas_Fiscais_Organizadas/).
+const UNSAFE_URI_CHAR = /[\x00-\x1f\x7f"\\`\$;|<>{}*?]/;
+const SAFE_URI = {
+  test: (uri) => uri.startsWith("file:///") && !UNSAFE_URI_CHAR.test(uri),
+};
 const DEBUG = process.env.MARKITDOWN_AUTO_DEBUG === "1";
 const DISABLED = process.env.MARKITDOWN_AUTO_DISABLE === "1";
 
