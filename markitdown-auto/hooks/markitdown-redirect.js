@@ -2,7 +2,7 @@
 // hook schema v1 — Claude Code PreToolUse
 const { pathToFileURL } = require("url");
 
-const SUPPORTED = /\.(pdf|docx|doc|pptx|xlsx|xls|epub|csv|html|htm|rtf|odt|ods|odp|eml|msg|zip)$/i;
+const SUPPORTED = /\.(pdf|docx|doc|pptx|xlsx|xls|epub|csv|rtf|odt|ods|odp|eml|msg|zip)$/i;
 // Allow any file:/// path that contains no shell-meaningful or control chars.
 // Was previously a strict allowlist that rejected PT-BR filenames with [ ] & ' = ! @ # ~
 // (very common in this user's repos, e.g. Notas_Fiscais_Organizadas/).
